@@ -5,11 +5,30 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Junge&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-q2P7zyhCbHp0He6Nj3A2hZ9JFsqJrNAXW3pIJ8zhm3Z2jmxukv9Umf4Vp0RY1z1J" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-xYxIRF7q4u+bRgN+0EuVWtTH+LVrqfhB3KrS15IHQ6mIRmHn+6a02v8HtMuN5Wj9" crossorigin="anonymous"></script>
+    <link href="./css/inicio.css" rel="stylesheet" />
+    <script src="./js/script.js"></script>
+    <title>Inicio</title>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src=".\images\logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
+            <li><a href="#prevencion" class="nav-link">Prevención de embarazo</a></li>
+            <li><a href="#cita" class="nav-link">Cita Médica</a></li>
+            <li><a href="#login" class="nav-link">Iniciar sesión</a></li>
+            <li><a href="#registro" class="nav-link">Regístrate</a></li>
+        </ul>
+    </nav>
+
+    
+
+
     <div class="v1_185">
         <div class="v1_186"></div>
         <div class="v1_187"></div>
@@ -17,7 +36,7 @@
         <div class="v1_189"></div>
         <div class="v1_190"></div>
         <div class="v1_192"></div>
-        <div class="v1_200"></div>
+      
         <div class="v1_201"></div>
         <div class="v1_202"></div>
         <div class="v1_203"></div>
@@ -56,20 +75,7 @@
             salud o con personas de confianza, te ayudará a aclarar dudas y fortalecer tu capacidad de tomar decisiones
             seguras que se alineen con tus planes y valores.</span><span class="v15_33">Conoce y Decide: La clave para
             la prevención del Embarazo</span><span class="v87_145">Hablemos de la prevención del embarazo</span>
-        <div class="v82_198">
-            <div class="v82_199">
-                <div class="name"></div>
-                <div class="name"></div>
-                <div class="v82_202">
-                    <div class="v82_203"></div>
-                </div>
-            </div>
-            <div class="name"></div>
-            <div class="v82_205">
-                <div class="name"></div>
-                <div class="name"></div>
-            </div>
-        </div>
+       
         <div class="v87_136"></div><span class="v87_137">Arenas, 151, Fracc. Playa Ensenada, Ensenada BC,
             México</span><span class="v87_138">(646) 173 - 4500</span><span
             class="v87_139">contacto@hospitalvelmar.com</span>
