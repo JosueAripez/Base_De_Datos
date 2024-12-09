@@ -15,8 +15,21 @@ body {
   padding: 10px 20px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   width: 50px;
+  margin-right: 10px; /* Separación entre logo y texto */
+}
+
+.navbar-brand.user-name {
+  text-decoration: none; /* Quitar subrayado */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto en negritas */
+  font-size: 16px; /* Ajusta el tamaño si es necesario */
 }
 
 .nav-links {
@@ -43,6 +56,8 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
+
+
 
 /* Slider */
 

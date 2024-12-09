@@ -19,27 +19,29 @@ if(isset($_SESSION['nombre'])){
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src=".\images\logo.png" alt="Logo">
-            <a class="navbar-brand" href="#">Bienvenido(a): 
-            <?php echo $_SESSION['nombre']; ?></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
-            <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
-            <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
-            <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
-            <li><a href="registro.php" class="nav-link">Regístrate</a></li>
-            <li><a href="logout.php">Salir</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo">
+        <img src=".\images\logo.png" alt="Logo">
+        <a class="navbar-brand user-name" href="#">Bienvenido(a): 
+        <?php echo $_SESSION['nombre']; ?></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
+        <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
+        <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+        <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
+        <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+        <li><a href="logout.php" class="nav-link">Salir</a></li>
+    </ul>
+</nav>
+
+
 
     <div class="slider">
         <div class="slider-images">
-            <img src="https://via.placeholder.com/800x400?text=Imagen+1" alt="Imagen 1">
-            <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2">
-            <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3">
+            <img src="./images/v1_200.png" alt="Imagen 1">
+            <img src="./images/v1_211.png" alt="Imagen 2">
+            <img src="./images/v12_26.png" alt="Imagen 3">
         </div>
         <div class="dots">
             <div class="dot active" onclick="currentSlide(1)"></div>
@@ -62,7 +64,7 @@ if(isset($_SESSION['nombre'])){
         <div class="v1_203"></div>
         <div class="v1_204"></div>
         <div class="v1_205"></div>
-        <div class="v1_206"></div><span class="v1_207">Bienvenidos: Hablemos de la Prevención del Embarazo
+        <span class="v1_207">Bienvenidos: Hablemos de la Prevención del Embarazo
             La prevención del embarazo es un tema esencial para cuidar la salud, el bienestar y las metas personales de
             los adolescentes. Conocer sobre el cuerpo, las opciones anticonceptivas y la importancia de tomar decisiones
             responsables es el primer paso para construir un futuro pleno y sin sorpresas inesperadas. Aquí encontrarás
@@ -98,11 +100,10 @@ if(isset($_SESSION['nombre'])){
        
 
         <div class="name"></div>
-        <div class="v1_214"></div>
         <div class="v92_194"></div>
 
     </div>
-    <!-- Este es un comentario en HTML 
+    
     <footer>
     <div class="footer-content">
         <div class="footer-item">
@@ -120,7 +121,6 @@ if(isset($_SESSION['nombre'])){
     </div>
   </footer>
 
-  -->
 </body>
 
 </html>
