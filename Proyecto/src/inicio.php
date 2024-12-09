@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['nombre'])){
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,6 +22,8 @@
     <nav class="navbar">
         <div class="logo">
             <img src=".\images\logo.png" alt="Logo">
+            <a class="navbar-brand" href="#">Bienvenido(a): 
+            <?php echo $_SESSION['nombre']; ?></a>
         </div>
         <ul class="nav-links">
             <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
@@ -23,6 +31,7 @@
             <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
             <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
             <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+            <li><a href="logout.php">Salir</a></li>
         </ul>
     </nav>
 
@@ -115,3 +124,7 @@
 </body>
 
 </html>
+<?php
+}else
+    header("Location: login.php?error=2");
+?>
