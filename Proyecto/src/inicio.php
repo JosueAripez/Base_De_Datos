@@ -19,14 +19,25 @@
         </div>
         <ul class="nav-links">
             <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
-            <li><a href="#prevencion" class="nav-link">Prevención de embarazo</a></li>
-            <li><a href="#cita" class="nav-link">Cita Médica</a></li>
-            <li><a href="#login" class="nav-link">Iniciar sesión</a></li>
-            <li><a href="#registro" class="nav-link">Regístrate</a></li>
+            <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
+            <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+            <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
+            <li><a href="registro.php" class="nav-link">Regístrate</a></li>
         </ul>
     </nav>
 
-    
+    <div class="slider">
+        <div class="slider-images">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+1" alt="Imagen 1">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3">
+        </div>
+        <div class="dots">
+            <div class="dot active" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
+        </div>
+    </div>
 
 
     <div class="v1_185">

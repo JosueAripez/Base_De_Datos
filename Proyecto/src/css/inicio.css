@@ -1,7 +1,11 @@
+/* Pagina General */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+/* Nav */
 
 .navbar {
   display: flex;
@@ -13,7 +17,6 @@ body {
 
 .logo img {
   width: 50px;
-  /* Ajusta el tamaño del logo */
 }
 
 .nav-links {
@@ -34,7 +37,6 @@ body {
 
 .nav-link:hover {
   background-color: #5c77a6;
-  /* Fondo al pasar el mouse */
 }
 
 .nav-link.active {
@@ -42,30 +44,77 @@ body {
   text-decoration: underline;
 }
 
+/* Slider*/
+
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Hace que el slider abarque toda la altura visible de la página */
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-images img {
+  width: 100%;
+  height: 100vh; /* Ajusta la altura para que abarque toda la pantalla */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente al contenedor */
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Estilos Pagina */
+
 .v1_185 {
   width: 100%;
   height: 2493px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: relative;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
+
 .v1_186 {
   width: 557px;
   height: 397px;
-  background: rgba(82,101,182,1);
+  background: rgba(82, 101, 182, 1);
   opacity: 1;
   position: absolute;
   top: 1527px;
   left: 190px;
   overflow: hidden;
 }
+
 .v1_187 {
   width: 636px;
   height: 423px;
-  background: rgba(154,191,184,1);
+  background: rgba(154, 191, 184, 1);
   opacity: 1;
   position: absolute;
   top: 1012px;
@@ -73,10 +122,11 @@ body {
   transform: rotate(-29deg);
   overflow: hidden;
 }
+
 .v1_188 {
   width: 630px;
   height: 390px;
-  background: rgba(154,191,184,1);
+  background: rgba(154, 191, 184, 1);
   opacity: 1;
   position: absolute;
   top: 1594px;
@@ -84,10 +134,11 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .v1_189 {
   width: 654px;
   height: 439px;
-  background: rgba(82,101,182,1);
+  background: rgba(82, 101, 182, 1);
   opacity: 1;
   position: absolute;
   top: 910px;
@@ -96,10 +147,11 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .v1_190 {
   width: 610px;
   height: 588px;
-  background: rgba(239,218,216,1);
+  background: rgba(239, 218, 216, 1);
   opacity: 1;
   position: absolute;
   top: 736px;
@@ -110,16 +162,18 @@ body {
   border-bottom-right-radius: 58px;
   overflow: hidden;
 }
+
 .v1_192 {
   width: 100%;
   height: 60px;
-  background: rgba(128,163,213,1);
+  background: rgba(128, 163, 213, 1);
   opacity: 1;
   position: absolute;
   top: 597px;
   left: 36px;
   overflow: hidden;
 }
+
 .v1_200 {
   width: 100%;
   height: 482px;
@@ -133,69 +187,76 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v1_201 {
   width: 25px;
   height: 15px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 646px;
   border-radius: 50%;
 }
+
 .v1_202 {
   width: 25px;
   height: 15px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 687px;
   border-radius: 50%;
 }
+
 .v1_203 {
   width: 25px;
   height: 15px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 769px;
   border-radius: 50%;
 }
+
 .v1_204 {
   width: 25px;
   height: 15px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 728px;
   border-radius: 50%;
 }
+
 .v1_205 {
   width: 25px;
   height: 15px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 810px;
   border-radius: 50%;
 }
+
 .v1_206 {
   width: 25px;
   height: 15px;
-  background: rgba(245,245,245,1);
+  background: rgba(245, 245, 245, 1);
   opacity: 1;
   position: absolute;
   top: 552px;
   left: 605px;
   border-radius: 50%;
 }
+
 .v1_207 {
   width: 550px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 813px;
   left: 75px;
@@ -205,15 +266,18 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .name {
   color: #fff;
 }
+
 .name {
   color: #fff;
 }
+
 .v1_210 {
   width: 299px;
-  color: rgba(253,250,251,1);
+  color: rgba(253, 250, 251, 1);
   position: absolute;
   top: 601px;
   left: 51px;
@@ -223,6 +287,7 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .v1_211 {
   width: 626px;
   height: 462px;
@@ -236,9 +301,10 @@ body {
   left: 738px;
   overflow: hidden;
 }
+
 .v1_212 {
   width: 528px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 1546px;
   left: 766px;
@@ -248,16 +314,19 @@ body {
   opacity: 1;
   text-align: right;
 }
+
 .name {
   color: #fff;
 }
+
 .name {
   color: #fff;
 }
+
 .v1_191 {
   width: 610px;
   height: 596px;
-  background: rgba(239,218,216,1);
+  background: rgba(239, 218, 216, 1);
   opacity: 1;
   position: absolute;
   top: 1506px;
@@ -268,6 +337,7 @@ body {
   border-bottom-right-radius: 58px;
   overflow: hidden;
 }
+
 .v15_30 {
   width: 662px;
   height: 338px;
@@ -286,9 +356,10 @@ body {
   transform: rotate(-10deg);
   overflow: hidden;
 }
+
 .v15_32 {
   width: 566px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 1630px;
   left: 762px;
@@ -298,9 +369,10 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .v15_33 {
   width: 533px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 1550px;
   left: 767px;
@@ -310,9 +382,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v87_145 {
   width: 481px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 756px;
   left: 108px;
@@ -322,10 +395,11 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .v82_198 {
   width: 100%;
   height: 96px;
-  background: rgba(122,147,180,1);
+  background: rgba(122, 147, 180, 1);
   padding: 32px 32px;
   margin: 24px;
   opacity: 1;
@@ -334,6 +408,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v82_199 {
   width: 40px;
   height: 35px;
@@ -348,12 +423,15 @@ body {
   left: 32px;
   overflow: hidden;
 }
+
 .name {
   color: #fff;
 }
+
 .name {
   color: #fff;
 }
+
 .v82_202 {
   width: 40px;
   height: 35px;
@@ -367,6 +445,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v82_203 {
   width: 23px;
   height: 35px;
@@ -375,11 +454,13 @@ body {
   position: absolute;
   top: 0px;
   left: 8px;
-  border: 3.5px solid rgba(30,30,30,1);
+  border: 3.5px solid rgba(30, 30, 30, 1);
 }
+
 .name {
   color: #fff;
 }
+
 .v82_205 {
   width: 202px;
   height: 32px;
@@ -394,25 +475,29 @@ body {
   left: 1206px;
   overflow: hidden;
 }
+
 .name {
   color: #fff;
 }
+
 .name {
   color: #fff;
 }
+
 .v87_136 {
   width: 100%;
   height: 184px;
-  background: rgba(64,88,122,1);
+  background: rgba(64, 88, 122, 1);
   opacity: 1;
   position: absolute;
   top: 2309px;
   left: 0px;
   overflow: hidden;
 }
+
 .v87_137 {
   width: 431px;
-  color: rgba(253,250,251,1);
+  color: rgba(253, 250, 251, 1);
   position: absolute;
   top: 2344px;
   left: 78px;
@@ -423,9 +508,10 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .v87_138 {
   width: 140px;
-  color: rgba(253,250,251,1);
+  color: rgba(253, 250, 251, 1);
   position: absolute;
   top: 2398px;
   left: 78px;
@@ -436,9 +522,10 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .v87_139 {
   width: 230px;
-  color: rgba(253,250,251,1);
+  color: rgba(253, 250, 251, 1);
   position: absolute;
   top: 2445px;
   left: 78px;
@@ -449,9 +536,11 @@ body {
   opacity: 1;
   text-align: left;
 }
+
 .name {
   color: #fff;
 }
+
 .v1_214 {
   width: 267px;
   background: url("../images/v1_214.png");
@@ -459,8 +548,9 @@ body {
   position: absolute;
   top: 1348px;
   left: 575px;
-  border: 12px solid rgba(122,147,180,1);
+  border: 12px solid rgba(122, 147, 180, 1);
 }
+
 .v92_194 {
   width: 76px;
   height: 76px;
