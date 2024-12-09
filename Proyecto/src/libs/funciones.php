@@ -60,4 +60,30 @@ function registraUsuario1($nombre_usuario, $fecha_nacimiento, $id_tipos_usuarios
     }
 }
 
+
+function recuperarpwd($usuario, $id, $dateob) {
+    global $conn;
+
+    try {
+        $sql = "SELECT * FROM usuarios 
+                WHERE (nombre_usuario = :usuario AND id_usuario = :id) 
+                   OR (nombre_usuario = :usuario AND fecha_nacimiento = :dateob) 
+                   OR (id_usuario = :id AND fecha_nacimiento = :dateob)";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([
+            'usuario' => $usuario,
+            'id' => $id,
+            'dateob' => $dateob
+        ]);
+
+        if ($stmt->rowCount() > 0) {
+            return $stmt->fetch(PDO::FETCH_ASSOC);  // Devuelve la fila encontrada
+        } else {
+            return false;  
+        }
+    } catch (PDOException $e) {
+        return false;
+    }
+}
 ?>
