@@ -1,7 +1,89 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+/* Estilos para el formulario */
+.form-container {
+    width: 300px;
+}
+
+h1 {
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los links */
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    color: #2C3E50;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
 
 .navbar {
     display: flex;
@@ -40,4 +122,34 @@ body {
 .nav-link.active {
     font-weight: bold;
     text-decoration: underline;
+}
+
+footer {
+    background-color: #40587b;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para apilar los elementos */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre cada item */
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
 }

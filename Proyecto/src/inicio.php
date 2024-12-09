@@ -87,13 +87,31 @@
             seguras que se alineen con tus planes y valores.</span><span class="v15_33">Conoce y Decide: La clave para
             la prevención del Embarazo</span><span class="v87_145">Hablemos de la prevención del embarazo</span>
        
-        <div class="v87_136"></div><span class="v87_137">Arenas, 151, Fracc. Playa Ensenada, Ensenada BC,
-            México</span><span class="v87_138">(646) 173 - 4500</span><span
-            class="v87_139">contacto@hospitalvelmar.com</span>
+
         <div class="name"></div>
         <div class="v1_214"></div>
         <div class="v92_194"></div>
+
     </div>
+    <!-- Este es un comentario en HTML 
+    <footer>
+    <div class="footer-content">
+        <div class="footer-item">
+            <img src=".\images\gps.png" alt="Ubicación" class="footer-icon">
+            <p>Arenas, 151, Fracc. Playa Ensenada, Ensenada BC, México</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\tel.png" alt="Teléfono" class="footer-icon">
+            <p>(646) 173 - 4500</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\correo.png" alt="Correo" class="footer-icon">
+            <p>contacto@hospitalvelmar.com</p>
+        </div>
+    </div>
+  </footer>
+
+  -->
 </body>
 
 </html>

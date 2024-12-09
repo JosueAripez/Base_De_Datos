@@ -24,32 +24,41 @@
     </ul>
   </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
+  <div class="container">
+        <div class="logo-container">
+            <img src="ruta/a/tu/logo.png" alt="Logo" class="logo">
         </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <div class="form-container">
+            <h1>¡Bienvenido!</h1>
+            <form action="#">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" placeholder="Ingresa tu Usuario" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingresa tu Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div class="links">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="#">Crear cuenta nueva</a>
+            </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-item">
+            <img src=".\images\gps.png" alt="Ubicación" class="footer-icon">
+            <p>Arenas, 151, Fracc. Playa Ensenada, Ensenada BC, México</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\tel.png" alt="Teléfono" class="footer-icon">
+            <p>(646) 173 - 4500</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\correo.png" alt="Correo" class="footer-icon">
+            <p>contacto@hospitalvelmar.com</p>
+        </div>
     </div>
-    
-</body>
+  </footer>
+  </body>
 </html>
