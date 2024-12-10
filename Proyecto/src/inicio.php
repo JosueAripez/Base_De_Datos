@@ -16,13 +16,14 @@ if(isset($_SESSION['nombre'])){
     <link href="./css/inicio.css" rel="stylesheet" />
     <script src="./js/script.js"></script>
     <title>Inicio</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
 </head>
 
 <body>
 <nav class="navbar">
     <div class="logo">
         <img src=".\images\logo.png" alt="Logo">
-        <a class="navbar-brand user-name" href="#">Bienvenido(a): 
+        <a class="navbar-brand user-name" href="perfil.php">Bienvenido(a): 
         <?php echo $_SESSION['nombre']; ?></a>
     </div>
     <ul class="nav-links">

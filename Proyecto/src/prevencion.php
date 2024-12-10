@@ -1,99 +1,120 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['nombre'])){
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prevención de Embarazo</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-q2P7zyhCbHp0He6Nj3A2hZ9JFsqJrNAXW3pIJ8zhm3Z2jmxukv9Umf4Vp0RY1z1J" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-xYxIRF7q4u+bRgN+0EuVWtTH+LVrqfhB3KrS15IHQ6mIRmHn+6a02v8HtMuN5Wj9" crossorigin="anonymous"></script>
     <link href="./css/prevencion.css" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/inicio.css" rel="stylesheet" />
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="v1_153">
-        <!-- Elementos visuales y estructura -->
-        <div class="v15_107"></div>
-        <div class="v15_105"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="v15_97"></div>
-
-        <!-- Contenido principal -->
-        <span class="v15_98">
-            La prevención del embarazo implica tomar decisiones informadas y utilizar métodos efectivos que se adapten a cada necesidad. Algunas de las formas más comunes para prevenirlo incluyen:
-
-            <strong>Uso de métodos anticonceptivos:</strong>
-            <ul>
-                <li><strong>Preservativos (condones):</strong> Protegen tanto contra embarazos como contra enfermedades de transmisión sexual (ETS).</li>
-                <li><strong>Anticonceptivos hormonales:</strong> Como píldoras, parches, inyecciones o implantes que evitan la ovulación.</li>
-                <li><strong>Dispositivos intrauterinos (DIU):</strong> Opción de larga duración recomendada para quienes buscan protección prolongada.</li>
-            </ul>
-
-            <strong>Educación sexual integral:</strong> Conocer el cuerpo, el ciclo menstrual, y entender cómo y cuándo ocurren los días fértiles es fundamental para tomar medidas adecuadas.
-
-            <strong>Comunicación con la pareja:</strong> Hablar abierta y honestamente sobre métodos anticonceptivos y expectativas en la relación ayuda a prevenir malentendidos y asumir responsabilidades compartidas.
-
-            <strong>Consulta médica:</strong> Visitar a un profesional de la salud para recibir orientación personalizada es clave para elegir el método más adecuado.
-        </span>
-
-        <span class="v87_153">
-            Hablar sobre la prevención del embarazo sin tabúes ni vergüenza es esencial para derribar mitos, tomar decisiones informadas y construir relaciones saludables. Muchas veces, el silencio o la desinformación pueden llevar a decisiones precipitadas o riesgos innecesarios.
-            
-            Abordar este tema abiertamente fomenta la confianza, tanto en uno mismo como en las relaciones con los demás. También permite acceder a recursos como métodos anticonceptivos y orientación médica de forma segura y oportuna. La prevención del embarazo no solo es una cuestión individual, sino un acto de responsabilidad hacia el propio bienestar y el de la comunidad. La información no debe ser motivo de vergüenza, sino una herramienta de empoderamiento.
-        </span>
-
-        <!-- Encabezados -->
-        <span class="v15_111">¿Por qué es importante hablar del tema sin pena?</span>
-        <span class="v87_149">¿Cómo Prevenir el Embarazo?</span>
-
-        <!-- Elementos adicionales -->
-        <div class="v15_100"></div>
-        <div class="v15_103"></div>
-        <div class="name"></div>
-        <div class="v15_147"></div>
-        <div class="v15_114"></div>
-        <div class="v15_130"></div>
-        <div class="v15_131"></div>
-        <div class="v15_132"></div>
-        <div class="v15_133"></div>
-        <div class="v15_134"></div>
-        <div class="v15_135"></div>
-        <div class="name"></div>
-        <div class="name"></div>
-        <div class="v76_142"></div>
-        <div class="v15_146"></div>
-        <div class="v76_144"></div>
-        <div class="v76_145"></div>
-
-        <!-- Información adicional -->
-        <div class="v82_165">
-            <div class="v82_166">
-                <div class="name"></div>
-                <div class="name"></div>
-                <div class="v82_169">
-                    <div class="v82_170"></div>
-                </div>
-            </div>
-            <div class="name"></div>
-            <div class="v82_172">
-                <div class="name"></div>
-                <div class="name"></div>
-            </div>
-        </div>
-
-        <!-- Contacto -->
-        <div class="v82_230"></div>
-        <div class="v82_231"></div>
-        <span class="v82_232">Arenas, 151, Fracc. Playa Ensenada, Ensenada BC, México</span>
-        <div class="v82_233"></div>
-        <span class="v82_234">(646) 173 - 4500</span>
-        <span class="v82_235">contacto@hospitalvelmar.com</span>
-        <div class="v82_236"></div>
-        <div class="name"></div>
-        <div class="v92_192"></div>
+<nav class="navbar">
+    <div class="logo">
+        <img src=".\images\logo.png" alt="Logo">
+        <a class="navbar-brand user-name" href="perfil.php">Bienvenido(a): 
+        <?php echo $_SESSION['nombre']; ?></a>
     </div>
+    <ul class="nav-links">
+        <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
+        <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
+        <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+        <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
+        <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+        <li><a href="logout.php" class="nav-link">Salir</a></li>
+    </ul>
+</nav>
+<section class="slider">
+        <div class="slides">
+            <img src="./images/v12_26.png" alt="Prevención del embarazo" />
+            <img src="./images/v12_26.png" alt="Educación sexual" />
+            <img src="./images/v12_26.png" alt="Apoyo para adolescentes" />
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>¿Por qué es importante la prevención del embarazo adolescente?</h2>
+        <p>
+            Cada año, millones de adolescentes enfrentan embarazos no planeados, lo que afecta su desarrollo personal, educativo y social. Las complicaciones derivadas del embarazo y parto son la principal causa de muerte en adolescentes entre 15 y 19 años en muchos países en desarrollo.
+        </p>
+        <section class="video-section">
+    <h2>Video: La importancia de la prevención</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/watch?v=LxndFZoOQA4&ab_channel=UNICEFRep%C3%BAblicaDominicana" 
+            title="Prevención del embarazo adolescente" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+        <p>
+            Además, los embarazos en adolescentes suelen estar vinculados con la falta de acceso a educación sexual, recursos económicos limitados y barreras sociales. Es vital implementar medidas para informar y empoderar a las jóvenes.
+        </p>
+
+        <h3>Impacto del embarazo adolescente:</h3>
+        <p>
+            El embarazo en adolescentes tiene consecuencias a nivel personal y social, incluyendo:
+        </p>
+        <ul>
+            <li><strong>Salud:</strong> Riesgos de complicaciones durante el embarazo y el parto.</li>
+            <li><strong>Educación:</strong> Muchas adolescentes abandonan la escuela, limitando sus oportunidades futuras.</li>
+            <li><strong>Economía:</strong> El embarazo temprano perpetúa ciclos de pobreza.</li>
+            <li><strong>Social:</strong> Estigmatización y discriminación en la comunidad.</li>
+        </ul>
+
+        <h3>Estrategias clave para la prevención:</h3>
+        <p>
+            A través de la educación y el acceso a recursos, es posible reducir significativamente los índices de embarazo en adolescentes. Algunas estrategias efectivas incluyen:
+        </p>
+        <ul>
+            <li>Implementar programas de <strong>educación sexual integral</strong> en las escuelas.</li>
+            <li>Proveer acceso gratuito a <strong>métodos anticonceptivos</strong> y asesoramiento.</li>
+            <li>Fomentar la <strong>comunicación abierta</strong> entre adolescentes, padres y tutores.</li>
+            <li>Crear campañas de concienciación que promuevan la <strong>igualdad de género</strong>.</li>
+        </ul>
+
+        <h3>Consejos prácticos para adolescentes:</h3>
+        <ul>
+            <li>Infórmate sobre los diferentes métodos anticonceptivos y cómo utilizarlos correctamente.</li>
+            <li>No tengas miedo de hacer preguntas a profesionales de la salud sobre temas de sexualidad y salud reproductiva.</li>
+            <li>Establece metas personales y enfócate en tu educación y desarrollo personal.</li>
+            <li>Rodéate de personas que te apoyen y respeten tus decisiones.</li>
+        </ul>
+    </section>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-item">
+            <img src=".\images\gps.png" alt="Ubicación" class="footer-icon">
+            <p>Arenas, 151, Fracc. Playa Ensenada, Ensenada BC, México</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\tel.png" alt="Teléfono" class="footer-icon">
+            <p>(646) 173 - 4500</p>
+        </div>
+        <div class="footer-item">
+            <img src=".\images\correo.png" alt="Correo" class="footer-icon">
+            <p>contacto@hospitalvelmar.com</p>
+        </div>
+    </div>
+  </footer>
 </body>
 </html>
+
+<?php
+}else
+    header("Location: login.php?error=2");
+?>

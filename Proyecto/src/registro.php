@@ -22,6 +22,7 @@ if (isset($_GET['error'])) {
     <title>Registro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/inicio.css" rel="stylesheet">
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="navbar">
@@ -81,7 +82,7 @@ if (isset($_GET['error'])) {
             </form>
         </div>
     </div>
-
+                        <br>
     <footer>
         <div class="footer-content">
             <div class="footer-item">

@@ -43,7 +43,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
 
             <div class="mb-3">
                 <label for="id" class="form-label">ID del Usuario</label>
-                <input type="number" class="form-control" id="id" name="id" placeholder="Ingrese tu ID" required>
+                <input type="number"  min="1" max="100" min class="form-control" id="id" name="id" placeholder="Ingrese tu ID" required>
             </div>
 
             <div class="mb-3">
