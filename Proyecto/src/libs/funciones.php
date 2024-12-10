@@ -39,6 +39,19 @@ function listaGeneros(){
     }
 }
 
+function listaMotivos(){
+    global $conn;
+    $sql = "select idmotivo_cita, descripcion from motivo_cita order by idmotivo_cita";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([]);   // no recibe parametros
+
+    if ($stmt->rowCount() > 0) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        return false;
+    }
+}
+
 function registraUsuario1($nombre_usuario, $fecha_nacimiento, $id_tipos_usuarios_fk, $id_genero_fk, $password) {
     global $conn;
 
@@ -59,6 +72,8 @@ function registraUsuario1($nombre_usuario, $fecha_nacimiento, $id_tipos_usuarios
         return false;
     }
 }
+
+
 
 
 function recuperarpwd($usuario, $id, $dateob) {
