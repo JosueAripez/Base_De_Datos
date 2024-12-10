@@ -28,15 +28,20 @@ if(isset($_SESSION['nombre'])){
         <?php echo $_SESSION['nombre']; ?></a>
     </div>
     <ul class="nav-links">
-        <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
-        <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
-        <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+    <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
+    <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
+    <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+    <li><a href="historialconsulta.php" class="nav-link">Mi historial de Citas</a></li>
+    <?php if (!isset($_SESSION['nombre'])): ?>
         <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
         <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+    <?php endif; ?>
+    <?php if (isset($_SESSION['nombre'])): ?>
         <li><a href="logout.php" class="nav-link">Salir</a></li>
-    </ul>
+    <?php endif; ?>
+</ul>
 </nav>
-<section class="slider">
+    <section class="slider">
         <div class="slides">
             <img src="./images/v12_26.png" alt="Prevención del embarazo" />
             <img src="./images/v12_26.png" alt="Educación sexual" />
@@ -52,13 +57,15 @@ if(isset($_SESSION['nombre'])){
         <section class="video-section">
     <h2>Video: La importancia de la prevención</h2>
     <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/watch?v=LxndFZoOQA4&ab_channel=UNICEFRep%C3%BAblicaDominicana" 
-            title="Prevención del embarazo adolescente" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/LxndFZoOQA4" 
+        title="Prevención del embarazo adolescente" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
     </div>
 </section>
         <p>
