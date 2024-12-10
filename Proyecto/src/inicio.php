@@ -49,8 +49,8 @@ if(isset($_SESSION['nombre'])){
             <img src="./images/v12_26.png" alt="Apoyo para adolescentes" />
         </div>
     </section>
-
-    <div class="content">
+<br>
+    <div class="contenti">
     <div class="text">
         <h1>Bienvenidos: Hablemos de la Prevención del Embarazo</h1>
         <p>
@@ -71,8 +71,8 @@ if(isset($_SESSION['nombre'])){
         <img src="./images/v1_211.png" alt="Prevención del Embarazo">
     </div>
 </div>
-
-<div class="content">
+<br>
+<div class="contenti">
     <div class="text">
         <h1>Prevención del Embarazo No Deseado</h1>
         <p>

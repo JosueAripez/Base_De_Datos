@@ -22,14 +22,14 @@ body {
 
 .logo img {
   width: 50px;
-  margin-right: 10px; /* Separación entre logo y texto */
+  margin-right: 10px; 
 }
 
 .navbar-brand.user-name {
-  text-decoration: none; /* Quitar subrayado */
-  color: white; /* Texto blanco */
-  font-weight: bold; /* Texto en negritas */
-  font-size: 16px; /* Ajusta el tamaño si es necesario */
+  text-decoration: none; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 16px; 
 }
 
 .nav-links {
@@ -89,16 +89,16 @@ footer p {
   margin: 0;
 }
 
+/* Contenido */
 
-
-.content {
-  background-color: #007BFF; /* Azul */
+.contenti {
+  background-color: #a8d0dd; 
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  width: 100%;
+  padding: 1%;
+  width: flex;
 }
 
 .text {
