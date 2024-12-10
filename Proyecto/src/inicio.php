@@ -30,6 +30,7 @@ if(isset($_SESSION['nombre'])){
         <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
         <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
         <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+        <li><a href="historialconsulta.php" class="nav-link">Mi historial de Citas</a></li>
         <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
         <li><a href="registro.php" class="nav-link">Regístrate</a></li>
         <li><a href="logout.php" class="nav-link">Salir</a></li>

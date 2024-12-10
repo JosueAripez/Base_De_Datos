@@ -86,4 +86,16 @@ function recuperarpwd($usuario, $id, $dateob) {
         return false;
     }
 }
+function buscaHistorialUsuario($iduser){
+    global $conn;
+    $sql = "select * from usuarios where id_usuario =?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$iduser]);   // no recibe parametros
+
+    if ($stmt->rowCount() > 0) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        return false;
+    }
+}
 ?>
