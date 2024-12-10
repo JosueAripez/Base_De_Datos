@@ -78,9 +78,7 @@ if ($_SESSION['idrol'] !=3) {
                                     <td><?php echo $fecha; ?></td>
                                     <td><?php echo $rol; ?></td>
                                     <td>
-                                        <!-- Botón de Editar -->
-                                        <a href="editarUsuario.php?id=<?php echo $id; ?>" class="btn btn-primary">Editar</a>
-                                        <!-- Botón de Eliminar (Formulario para eliminar usuario) -->
+                                       
                                         <form action="eliminarUsuario.php" method="POST" style="display:inline;">
                                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                                             <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar este usuario?');">Eliminar</button>
