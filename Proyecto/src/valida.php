@@ -23,8 +23,12 @@ if(isset($_POST['usuario']) !=null && isset($_POST['pwd'])!= null){
             $_SESSION['nombre'] = $nombre;
             $_SESSION['idrol'] = $rol;
         }
-        // al encontrar al usuario lo redirecciona al menu
-        header("Location: inicio.php");
+         // Verifica el rol del usuario
+        if ($rol == 3) { 
+            header("Location: adminindex.php");
+        } else {
+            header("Location: inicio.php");
+        }
     }
     // no se encontraron datos del usuario que coincidan
     else{

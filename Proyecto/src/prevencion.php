@@ -1,8 +1,6 @@
 <?php 
 session_start();
 
-if(isset($_SESSION['nombre'])){
-
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +14,7 @@ if(isset($_SESSION['nombre'])){
     <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-q2P7zyhCbHp0He6Nj3A2hZ9JFsqJrNAXW3pIJ8zhm3Z2jmxukv9Umf4Vp0RY1z1J" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-xYxIRF7q4u+bRgN+0EuVWtTH+LVrqfhB3KrS15IHQ6mIRmHn+6a02v8HtMuN5Wj9" crossorigin="anonymous"></script>
+    <link href="./css/adminindex.css" rel="stylesheet" />
     <link href="./css/prevencion.css" rel="stylesheet" />
     <link href="./css/inicio.css" rel="stylesheet" />
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
@@ -24,22 +23,29 @@ if(isset($_SESSION['nombre'])){
 <nav class="navbar">
     <div class="logo">
         <img src=".\images\logo.png" alt="Logo">
-        <a class="navbar-brand user-name" href="perfil.php">Bienvenido(a): 
-        <?php echo $_SESSION['nombre']; ?></a>
+        <a class="navbar-brand user-name" href="inicio.php">
+            <?php if (isset($_SESSION['nombre'])): ?>
+                Bienvenido(a): <?php echo $_SESSION['nombre']; ?>
+            <?php else: ?>
+                Bienvenido(a)
+            <?php endif; ?>
+        </a>
     </div>
     <ul class="nav-links">
-    <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
-    <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
-    <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
-    <li><a href="historialconsulta.php" class="nav-link">Mi historial de Citas</a></li>
-    <?php if (!isset($_SESSION['nombre'])): ?>
-        <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
-        <li><a href="registro.php" class="nav-link">Regístrate</a></li>
-    <?php endif; ?>
-    <?php if (isset($_SESSION['nombre'])): ?>
-        <li><a href="logout.php" class="nav-link">Salir</a></li>
-    <?php endif; ?>
-</ul>
+        <li><a href="inicio.php" class="nav-link">Inicio</a></li>
+        <li><a href="prevencion.php" class="nav-link active">Prevención de embarazo</a></li>
+        <li><a href="<?php echo isset($_SESSION['nombre']) ? 'cita_medica.php' : 'login.php?error=2'; ?>" class="nav-link">Cita Médica</a></li>
+        <li><a href="<?php echo isset($_SESSION['nombre']) ? 'historialconsulta.php' : 'login.php?error=2'; ?>" class="nav-link">Mi historial de Citas</a></li>
+        <?php if (!isset($_SESSION['nombre'])): ?>
+            <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
+            <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+        <?php else: ?>
+            <li><a href="logout.php" class="nav-link">Salir</a></li>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['idrol']) && $_SESSION['idrol'] == 3): ?>
+            <li><a href="adminindex.php" class="nav-link">Administración</a></li>
+        <?php endif; ?>
+    </ul>
 </nav>
     <section class="slider">
         <div class="slides">
@@ -122,6 +128,3 @@ if(isset($_SESSION['nombre'])){
 </html>
 
 <?php
-}else
-    header("Location: login.php?error=2");
-?>

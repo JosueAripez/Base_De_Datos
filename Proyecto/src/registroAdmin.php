@@ -2,7 +2,12 @@
 require_once "libs/conexion.php";
 require_once "libs/funciones.php";
 
-// Validar que se reciban los datos
+session_start();
+
+
+
+
+
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
     $mensajeError = "";
@@ -57,7 +62,7 @@ if (isset($_GET['error'])) {
     <!-- Contenedor Principal -->
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="col-12 col-md-6">
-            <h2 class="text-center mb-4">Registro</h2>
+            <h2 class="text-center mb-4">Registro de Usuarios</h2>
 
             <!-- Mensaje de error -->
             <?php if (!empty($mensajeError)) { ?>
@@ -67,21 +72,21 @@ if (isset($_GET['error'])) {
             <?php } ?>
 
             <!-- Formulario -->
-            <form method="POST" action="procesa_registro.php" class="bg-light p-4 rounded shadow-sm">
+            <form method="POST" action="procesaRegAdmin.php" class="bg-light p-4 rounded shadow-sm">
                 <div class="mb-3">
-                    <label for="usuario" class="form-label">Crea un Nombre de Usuario</label>
+                    <label for="usuario" class="form-label">Crea un Nombre para el Usuario</label>
                     <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su nombre de usuario" required autofocus>
                 </div>
                 <div class="mb-3">
-                    <label for="pwd" class="form-label">Crea una Contraseña</label>
+                    <label for="pwd" class="form-label">Crea una Contraseña para el Usuario</label>
                     <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Ingrese su contraseña" required>
                 </div>
                 <div class="mb-3">
-                    <label for="dateob" class="form-label">Fecha de Nacimiento</label>
+                    <label for="dateob" class="form-label">Fecha de Nacimiento del Usuario</label>
                     <input type="date" class="form-control" id="dateob" name="dateob" required>
                 </div>
                 <div class="mb-3">
-                    <label for="gen" class="form-label">Género</label>
+                    <label for="gen" class="form-label">Género del Usuario</label>
                     <select name="gen" id="gen" class="form-control" required>
                         <option value="">Selecciona un Género</option>
                         <?php
@@ -100,7 +105,7 @@ if (isset($_GET['error'])) {
                     <button type="reset" class="btn btn-secondary">Limpiar</button>
                 </div>
                 <div class="mt-5 d-flex justify-content-center">
-                    <a href="login.php" class="text-decoration-none">¿Ya tienes cuenta? ¡Inicia Sesión!</a>
+                    <a href="adminusuarios.php" class="text-decoration-none">Regresar</a>
                 </div>
             </form>
         </div>
@@ -125,3 +130,4 @@ if (isset($_GET['error'])) {
 
 </body>
 </html>
+<?php

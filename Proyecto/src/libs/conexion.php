@@ -11,7 +11,11 @@
     } catch(PDOException $e) {        
     	echo "Fallo de conexion: " . $e->getMessage();
         
-        }
+    }
+
+
+  
+
 
 
 

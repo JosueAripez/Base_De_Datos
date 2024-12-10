@@ -12,6 +12,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/adminindex.css" rel="stylesheet" />
     <link href="./css/inicio.css" rel="stylesheet">
 </head>
 
@@ -20,8 +21,30 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
 <!-- Navbar -->
 <nav class="navbar">
     <div class="logo">
-        <img src="./images/logo.png" alt="Logo">
+        <img src=".\images\logo.png" alt="Logo">
+        <a class="navbar-brand user-name" href="perfil.php">
+            <?php if (isset($_SESSION['nombre'])): ?>
+                Bienvenido(a): <?php echo $_SESSION['nombre']; ?>
+            <?php else: ?>
+                Bienvenido(a)
+            <?php endif; ?>
+        </a>
     </div>
+    <ul class="nav-links">
+        <li><a href="inicio.php" class="nav-link">Inicio</a></li>
+        <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
+        <li><a href="<?php echo isset($_SESSION['nombre']) ? 'cita_medica.php' : 'login.php?error=1'; ?>" class="nav-link">Cita Médica</a></li>
+        <li><a href="<?php echo isset($_SESSION['nombre']) ? 'historialconsulta.php' : 'login.php?error=1'; ?>" class="nav-link">Mi historial de Citas</a></li>
+        <?php if (!isset($_SESSION['nombre'])): ?>
+            <li><a href="login.php" class="nav-link">Iniciar sesión</a></li>
+            <li><a href="registro.php" class="nav-link">Regístrate</a></li>
+        <?php else: ?>
+            <li><a href="logout.php" class="nav-link">Salir</a></li>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['idrol']) && $_SESSION['idrol'] == 3): ?>
+            <li><a href="adminindex.php" class="nav-link">Administración</a></li>
+        <?php endif; ?>
+    </ul>
 </nav>
 
 <!-- Formulario Principal -->

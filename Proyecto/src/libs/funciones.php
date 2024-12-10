@@ -113,4 +113,38 @@ function buscaHistorialUsuario($iduser){
         return false;
     }
 }
+
+function listaUsuarios(){
+    global $conn;
+    $sql = "select * from usuarios";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([]);   // no recibe parametros
+
+    if ($stmt->rowCount() > 0) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        return false;
+    }
+}
+function eliminarUsuario($id_usuario) {
+    global $conn;
+
+    // Preparamos la consulta SQL para eliminar el usuario
+    $sql = "DELETE FROM usuarios WHERE id_usuario = ?";
+    $stmt = $conn->prepare($sql);
+    
+    // Vinculamos el parámetro con el tipo 'i' (entero) en la consulta
+    $stmt->bindParam(1, $id_usuario, PDO::PARAM_INT);
+
+    // Ejecutamos la consulta
+    if ($stmt->execute()) {
+        // Si la eliminación fue exitosa, retornamos true
+        return true;
+    } else {
+        // Si hubo un error, retornamos false
+        return false;
+    }
+}
+
+
 ?>

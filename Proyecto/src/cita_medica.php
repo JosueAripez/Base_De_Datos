@@ -13,6 +13,7 @@ if (isset($_SESSION['nombre']) && isset($_SESSION['iduser'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda tu Cita</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/adminindex.css" rel="stylesheet" />
     <link href="./css/inicio.css" rel="stylesheet">
     <link rel="icon" href="./images/logo.ico" type="image/x-icon">
 </head>
@@ -24,10 +25,14 @@ if (isset($_SESSION['nombre']) && isset($_SESSION['iduser'])) {
         <?php echo htmlspecialchars($_SESSION['nombre']); ?></a>
     </div>
     <ul class="nav-links">
-        <li><a href="inicio.php" class="nav-link active">Inicio</a></li>
+        <li><a href="inicio.php" class="nav-link">Inicio</a></li>
         <li><a href="prevencion.php" class="nav-link">Prevención de embarazo</a></li>
-        <li><a href="cita_medica.php" class="nav-link">Cita Médica</a></li>
+        <li><a href="cita_medica.php" class="nav-link active">Cita Médica</a></li>
+        <li><a href="historialconsulta.php" class="nav-link">Mi historial de Citas</a></li>
         <li><a href="logout.php" class="nav-link">Salir</a></li>
+        <?php if (isset($_SESSION['idrol']) && $_SESSION['idrol'] == 3): ?>
+            <li><a href="adminindex.php" class="nav-link">Administración</a></li>
+        <?php endif; ?>
     </ul>
 </nav>
 <br>
